@@ -13,16 +13,41 @@ body {
     position: relative;
     top: 100px;
     left: 90px;
+    
 }
 span {
+    display: inline-block;
     font-size: 50px;
     color: white;
-    display: inline-block;
-    animation: span-jump 4s infinite alternate;
+    text-shadow: 0.04em 0.04em 0.05em black;
+    animation: span-wave 4s infinite alternate;
 }
 
+#descripcion {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -167px;
+    left: 170px;
+    height: 300px;
+    width: 500px;
+    border-radius: 0.25rem;
+    background-color: #EEF2FC;
+    box-shadow: 10px 5px 5px black;
+}
 
-@keyframes span-jump {
+#descripcion p{
+    font-size: 18px;
+    padding: 0px 20px;
+}
+
+#descripcion img {
+    max-height:100%;
+    max-width: 30%;
+    padding-left: 20px;
+}
+
+@keyframes span-wave {
     0% {
         transform: translateY(-30px);
     }
@@ -31,9 +56,7 @@ span {
     }
 }
 
-a {
-    text-decoration: none;
-}
+
 /*Recordar quitar el bottom y dejar ajustado por la altura de la pagina*/
 #pie {
     background-color: #333333;
