@@ -1,6 +1,13 @@
+#navegacion {
+    position: sticky;
+    top: 0px;    
+}
+
 ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -8.4px;
     padding: 0;
     overflow: hidden;
     background-color: #333333;
@@ -18,4 +25,10 @@ li {
 
 li:hover {
     background-color: #111111;
+}
+/*Recordar quitar el bottom y dejar ajustado por la altura de la pagina*/
+#pie {
+    border: solid 1px;
+    position: relative;
+    bottom: -695px;
 }
