@@ -15,20 +15,33 @@ body {
     left: 90px;
     
 }
-span {
+
+.letra, .letra-vertical1, .letra-vertical2, .letra-vertical3 {
     display: inline-block;
+    position: relative;
     font-size: 50px;
     color: white;
-    text-shadow: 0.04em 0.04em 0.05em black;
-    animation: span-wave 4s infinite alternate;
+    /*text-shadow: 0.04em 0.04em 0.05em black;*/
+    animation: span-wave 4s infinite alternate ease-in-out;
+}
+.letra-vertical1 { 
+    left: 37px;
+}
+
+.letra-vertical2 { 
+    left: 28px;
+}
+
+.letra-vertical3 { 
+    left: 32px;
 }
 
 #descripcion {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     position: relative;
-    top: -167px;
-    left: 170px;
+    top: -110px;
+    left: 0px;
     height: 300px;
     width: 500px;
     border-radius: 0.25rem;
@@ -49,13 +62,65 @@ span {
 
 @keyframes span-wave {
     0% {
+        transform: translateY(-20px);
+    }
+    25% {
         transform: translateY(-30px);
     }
-    100% {
+    75% {
         transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(20px);
     }
 }
 
+button {
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    border: none;
+    background-color: #EEF2FC;
+    text-align: center;
+    left: 185px;
+    bottom: 50px;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px;
+   }
+   
+   button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+   
+   button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+   }
+   
+   button:hover span {
+    padding-right: 15px;
+   }
+   
+   button:hover span:after {
+    opacity: 1;
+    right: 0;
+   }
+
+   a {
+    color: #3d405b;
+    text-decoration: none;
+   }
 
 /*Recordar quitar el bottom y dejar ajustado por la altura de la pagina*/
 #pie {
