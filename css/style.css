@@ -1,133 +1,84 @@
 /* ----------Fuente---------*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-
-body {
-    font-family: 'Lato', sans-serif;
-    background: linear-gradient(115deg, #004ff9, #000000);
-    background-attachment: fixed;
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-#nombre {
-    display: inline-block;
-    position: relative;
-    top: 100px;
-    left: 90px;
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-color:#202020;
+}
+
+#encabezado {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1d1d;
+    height: 100vh;
+    width: 7rem;
+}
+#encabezado header {
+    height: 100vh;
+}
+
+#logo img {
+    width: 100%;
+}
+#barra_navegacion {
+    display: flex;
+    flex-direction: column;
+    margin: 160px 0px;
+}
+#navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 0.5px solid #282828;
+}
+
+#navegacion a {
+    text-decoration: none;
+    text-align: center;
+    color: #8a8a8a;
+    border-bottom: 1px solid #282828;
+    line-height: 3.5rem;
+    transition: all 400ms;
+}
+
+#navegacion a:hover {
+    color: azure;
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     
 }
 
-.letra, .letra-vertical1, .letra-vertical2, .letra-vertical3 {
-    display: inline-block;
-    position: relative;
-    font-size: 50px;
-    color: white;
-    /*text-shadow: 0.04em 0.04em 0.05em black;*/
-    animation: span-wave 4s infinite alternate ease-in-out;
-}
-.letra-vertical1 { 
-    left: 37px;
+#social a {
+    color: #8a8a8a;
 }
 
-.letra-vertical2 { 
-    left: 28px;
+#social svg {
+    width: 1.1rem;
 }
 
-.letra-vertical3 { 
-    left: 32px;
+#firma {
+    margin-top: 9rem;
+    color: #8a8a8a;
 }
 
-#descripcion {
-    display: inline-flex;
-    flex-direction: column;
-    position: relative;
-    top: -110px;
-    left: 0px;
-    height: 300px;
-    width: 500px;
-    border-radius: 0.25rem;
-    background-color: #EEF2FC;
-    box-shadow: 10px 5px 5px black;
-}
-
-#descripcion p{
-    font-size: 18px;
-    padding: 0px 20px;
-}
-
-#descripcion img {
-    max-height:100%;
-    max-width: 30%;
-    padding-left: 20px;
-}
-
-@keyframes span-wave {
-    0% {
-        transform: translateY(-20px);
-    }
-    25% {
-        transform: translateY(-30px);
-    }
-    75% {
-        transform: translateY(30px);
-    }
-    100% {
-        transform: translateY(20px);
-    }
-}
-
-button {
-    display: inline-block;
-    position: relative;
-    border-radius: 4px;
-    border: none;
-    background-color: #EEF2FC;
+#firma p {
+    font-size: 0.8rem;
     text-align: center;
-    left: 185px;
-    bottom: 50px;
-    font-size: 17px;
-    padding: 16px;
-    width: 130px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 20px;
-   }
-   
-   button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-   }
-   
-   button span:after {
-    content: '»';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -15px;
-    transition: 0.5s;
-   }
-   
-   button:hover span {
-    padding-right: 15px;
-   }
-   
-   button:hover span:after {
-    opacity: 1;
-    right: 0;
-   }
-
-   a {
-    color: #3d405b;
-    text-decoration: none;
-   }
-
-/*Recordar quitar el bottom y dejar ajustado por la altura de la pagina*/
-#pie {
-    background-color: #333333;
-    border: solid 1px;
-    position: relative;
-    bottom: -694px;
-    margin: 0px -8.4px;
-    padding: 0px 4px;
 }
