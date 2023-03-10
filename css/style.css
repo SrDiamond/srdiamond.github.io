@@ -92,7 +92,7 @@ body, html{
 }
 
 h1 {
-    background-image: url('../video/video.gif');
+    background-image: url('../video/video.mp4'); /*Video del autor Caleb Worcester*/
     background-size: contain;
     background-position-y: center;
     background-position-x: 50%;
